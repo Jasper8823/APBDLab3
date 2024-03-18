@@ -2,8 +2,8 @@
 
 public interface IHazardNotifier
 {
-    public void Hazard()
+    public void Hazard(string sNumber)
     {
-        Console.WriteLine("Warning container isn't stable");
+        Console.WriteLine("Warning container isn't stable "+sNumber);
     }
 }
