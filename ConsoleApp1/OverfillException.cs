@@ -4,6 +4,9 @@ public class OverfillException : Exception
 {
     public OverfillException()
     {
-        Console.WriteLine("Conteiner is overloaded");
+    }
+    public OverfillException(string s)
+    {
+        Console.WriteLine("Container is overloaded");
     }
 }

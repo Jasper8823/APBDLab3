@@ -21,9 +21,14 @@ public abstract class Container : OverfillException
     
     public virtual void takeCargo(double cargo)
     {
-        if (MaxPayload < Mass + cargo) throw new OverfillException();
+        if (MaxPayload < Mass + cargo) throw new OverfillException("123");
         else {
             Mass += cargo;
         }
+    }
+
+    public virtual void getInfo()
+    {
+        
     }
 }

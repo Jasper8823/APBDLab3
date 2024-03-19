@@ -19,7 +19,12 @@ public class Ship
             Console.WriteLine("Max weight will be exceeded if you add this container");
         }
     }
-    
+
+    public void removeContainer(int i)
+    {
+        curWeight = curWeight - (containers[i].Weight + containers[i].Mass);
+        containers.RemoveAt(i);
+    }
     public void addContainerList(List<Container> conts)
     {
         double Sum = 0;
@@ -38,6 +43,16 @@ public class Ship
         else
         {
             Console.WriteLine("Max weight will be exceeded if you add this containers");
+        }
+    }
+
+    public void getInfo()
+    {
+        Console.WriteLine("Ship maximal weight: "+maxWeight+", current weight: "+curWeight+", maximal number of containers: "+ maxNumCon+", maximal speed"+maxSpeed);
+        Console.WriteLine("Containers on board:");
+        for (int i = 0; i < containers.Count; i++)
+        {
+            containers[i].getInfo();
         }
     }
 }

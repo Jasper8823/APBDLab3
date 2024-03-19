@@ -13,4 +13,12 @@ public class GasContainer : Container, IHazardNotifier
     {
         SerNumber = "KON-G-" + i;
     }
+    public override void getInfo()
+    {
+        Console.WriteLine();
+        Console.WriteLine("Container serial number: "+SerNumber+" | cargo mass:"+Mass+" | height:"+Height);
+        Console.WriteLine("   container weight: "+Weight+" | depth:"+Depth+" | maximal payload:"+MaxPayload);
+        Console.WriteLine("   content of the container: "+type+" | container atmospheres: "+Atmospheres);
+        Console.WriteLine();
+    }
 }
